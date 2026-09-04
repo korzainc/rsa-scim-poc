@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.env
+.kc-source.env
+data/
+*.local
+.DS_Store

@@ -1,0 +1,22 @@
+{
+  "name": "scim-users-poc",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": [
+    "web"
+  ],
+  "scripts": {
+    "dev": "concurrently -n scim,web -c blue,green \"node server/index.js\" \"npm run dev -w web\"",
+    "build": "npm run build -w web",
+    "start": "node server/index.js",
+    "simulate": "node scripts/simulate-idp.mjs"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
